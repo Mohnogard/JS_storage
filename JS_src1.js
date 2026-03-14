@@ -192,7 +192,6 @@ case "16":{
         }
     }
     break;}
-
 case "17":{
     var mult1 = [];
     var x="*";
@@ -203,7 +202,6 @@ case "17":{
     document.getElementById("result").innerHTML+="<br>";
     }
     break;}
-
 case "18":{
     var mult1 = [];
     var x="*";
@@ -214,7 +212,6 @@ case "18":{
     document.getElementById("result").innerHTML+="<br>";
     }
     break;}
-
 case "19":{
     var mult1 = [];
     var x=1;
@@ -226,7 +223,6 @@ case "19":{
     document.getElementById("result").innerHTML+="<br>";
     }
     break;}
-
 case "20":{
     var mult1 = [];
     var x=1;
@@ -894,34 +890,6 @@ case "50":{
     break;}
 
 
-
-case "50a":{
-
-
-        for(let i=0; i<=1000; i++){
-        let digits = String(i).split("");
-        var rev = [...digits].reverse();
-        var revnum = rev.join('')
-        var check = 0;
-        var test = revnum*i
-        let test1 = String(test).split("");
-        var comp = test1[0]
-        var skip = test1.length;
-        if(digits.length>1){
-        for (var j of test1){
-            if (skip==1){
-                if (Number(j)==1)
-                    check=1;
-                break;
-            } else {
-                skip-=1
-            }
-        }
-       if (check==1){
-        document.getElementById("result").innerHTML+=i + "<br>";
-       }
-    }}
-    break;}
 
 
 }
