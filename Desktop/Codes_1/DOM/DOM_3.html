@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Structure Analysis</title>
+</head>
+<body>
+  <div id="parent">
+    <h1>Welcome</h1>
+    <p>This is a paragraph.</p>
+
+    <ul id="table">
+      <li>Item 1</li>
+      <li id="target">Item 2 (Target)</li>
+      <li>Item 3</li>
+    </ul>
+    <footer>Footer Content</footer>
+  </div>
+  <div> 
+    This is not part of it
+  </div>
+
+  <script>
+    // Get the parent element
+    const parent = document.getElementById('parent');
+
+    // 1️⃣ Log all children elements of parent
+    console.log("All children of parent:", parent.children);
+
+    const target = document.getElementById('table')
+    console.log("Previous sibling of target:", target.children);
+    console.log(target.children[0].textContent)
+    console.log(document.getElementById('target'))
+    // Optional: log all siblings of target
+    // const siblings = Array.from(target.parentElement.children).filter(el => el !== target);
+    // console.log("All siblings of target:", siblings);
+  </script>
+</body>
+</html>

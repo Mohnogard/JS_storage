@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Card Builder</title>
+  <style>
+    /* Optional styling for the card */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 300px;
+      padding: 16px;
+      margin: 20px auto;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .card h2 {
+      margin: 12px 0 8px;
+    }
+    .card p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    // 1️⃣ Select the container
+    const app = document.getElementById('app');
+
+    // 2️⃣ Create the card element
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    // 3️⃣ Create and append the title
+    const title = document.createElement('h2');
+    title.textContent = "Dynamic Card Title";
+    card.appendChild(title);
+
+    // 4️⃣ Create and append the description
+    const description = document.createElement('p');
+    description.textContent = "This is a description created entirely using JavaScript. No HTML was written for this card!";
+    card.appendChild(description);
+
+    // 5️⃣ Create and append the image
+    const image = document.createElement('img');
+    image.src = "image.jpg"; // Placeholder image
+    image.alt = "Card Image";
+    card.appendChild(image);
+
+    // 6️⃣ Append the card to the container
+    app.appendChild(card);
+  </script>
+</body>
+</html>
